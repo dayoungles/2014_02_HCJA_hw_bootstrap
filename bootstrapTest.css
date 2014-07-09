@@ -1,8 +1,9 @@
-.col-md-10 {
+.col-md-7 {
 	border: 1px solid black;
 }
 .col-md-2{
 	border:1px solid red;
+	height: 1200px;
 }
 
 .logo {
@@ -11,14 +12,30 @@
 	border: 1px solid black;
 }
 
+.menu {
+	width: 100%;
+
+	border: 1px solid black;
+}
+
+.menu>ul {
+	list-style-type: none;
+	padding:0px;
+}
+
+.menu>ul li {
+	height:50px;
+	border: 1px solid yellow;
+}
+
 .login {
 	height: 50px;
 }
 .card {
-	width: 200px;
-	height: 200px;
+	height: 300px;
 	border: 1px solid black;
-	margin: 20px ;
+	margin: 20px;
+	
 }
 
 .bigImage{
@@ -29,6 +46,11 @@
 
 .bigCard{
 	border: 1px solid black;
-	height: 400px;
+	height: 620px;
+	margin: 20px;
 }
 
+.footer{
+	border: 1px solid green;
+	height: 100px;
+}
