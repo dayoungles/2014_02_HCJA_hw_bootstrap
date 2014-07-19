@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>뉴스스탠드 페이지</title>
+	<link rel = "stylesheet" type = "text/css" href = "design.css">
+		<script src = "/Users/dayoungle/dropbox/lecture/html/underscore.js"></script>
+	<script>
+		var articles = ["기사1 입니다","기사2 입니다","기사3 입니다","기사4 입니다","기사5 입니다","기사6 입니다","기사7 입니다","기사 8입니다","기사 9입니다","기사 10입니다","기사11 입니다","기사12 입니다","기사13 입니다","기사14 입니다","기사15 입니다","기사16 입니다","기사17 입니다","기사 18입니다","기사 19입니다","기사 20입니다","기사21 입니다","기사22 입니다","기사23 입니다","기사24 입니다","기사25 입니다","기사26 입니다","기사27 입니다","기사 28입니다","기사 29입니다","기사 30입니다","기사31 입니다","기사32 입니다","기사33 입니다","기사34 입니다","기사35 입니다","기사36 입니다","기사37 입니다","기사 38입니다","기사 39입니다","기사 40입니다"]
+		var compiled = _.template("<div> <%= name %></div>");
+		var result = compiled({name: 'moe'});
+		console.log(result);
+		
+		var getarticles = function(){
+			var articlesElement = document.querySelectorAll("li.article");
+			var array = [];
+			for (var i = 0;i<articlesElement.length; i++){						
+				while(array.length < articlesElement.length) {
+					var randomnum = Math.floor((Math.random()*40));
+					if(array.indexOf(randomnum) == -1)  {
+						array.push(randomnum);
+						articlesElement[i].innerHTML += "<a href = \"#\">" + articles[randomnum] + "</a>";
+						break;
+					}
+				}
+				
+				
+				
+			}			
+		}
+/*
+		var get1articles = function(){
+			var articles = document.querySelectorAll (".articles1");
+			for(var i = 0; i<articles.length; i++){
+				var randomNum = Math.floor((Math.random()*10));
+				articles[i].innerHTML += "<li><a href = \"#\">"+articless[randomNum]+"</a></li>";
+			}
+		}
+*/
+		var init = function(){
+			getarticles();
+			
+		}
+		window.addEventListener('load', function(){
+			console.log('loaded');
+			getarticles();
+			
+			var contents = document.getElementById('company_list'); 
+			contents.style.display = (contents.style.display != 'block' ? 'block': 'none');
+
+		}, false);
+/* 		window.onload = init; */
+
+
+	</script>
+
+</head>
+<body>
+	
+	<header>
+	
+		<div id="subject">
+			<a href = "http://newsstand.naver.com/?list=ct4#"><h1></h1></a>
+			<h2><span>뉴스 스탠드 기사는 각 언론사에서 직접 편집합니다</span></h2>
+		</div>
+		
+		<div id="select">
+			<div id="mynews"></div>
+			<div id="whole_press"><!-- <span class = "none">전체언론사</span> --></div>
+		</div>
+		
+		<div id="tabs">
+			<!--로그인 부분 생략 -->
+		</div>
+
+	</header>
+	
+	<nav>
+		<ul>
+			<li class = "list1"><a href = "#1"></a></li>
+			<li class = "list2"><a href = "#2"></a></li>
+			<li class = "list3"><a href = "#3"></a></li>
+			<li class = "list4"><a href = "#4"></a></li>
+			<li class = "list5"><a href = "#5"></a></li>
+			<li class = "list6"><a href = "#6"></a></li>
+			<li class = "list7"><a href = "#7"></a></li>
+			<li class = "list8"><a href = "#8"></a></li>
+			<li class = "list9"><a href = "#9"></a></li>
+		</ul>
+	</nav>
+	
+	<section>
+			<aside id ="left"></aside>
+
+
+		<articles>
+			<div id="upper">
+				<div class="upper_left">
+					<div id="logo">
+						<a href=""><img src = "http://static.naver.net/newsstand/up/2013/0813/nsd11491303.gif"></a>
+					 </div>		
+					<div id="under_logo"> 
+						<ul>
+							<li><div id = "list1"></div> </li>
+							<li><div id = "list2"></div> </li>
+							<li><div id ="list3"></div> </li>
+							<li><div id ="list4"></div> </li>
+							<li><div id ="list5"></div> </li>
+							<li> 편집일자 시간</li>
+						</ul>
+					</div>
+				</div>
+				
+				<div id="ad"> 
+					<a href=""><img src = "http://adcreative.naver.com/ad3/1004/1004874/420_90_21382339269735.jpg" width =100%></a>
+					
+				</div>
+			</div>
+			<div class="contents">
+					<div class = "first_content">
+						<div class = "first-1">
+							
+								<img src="http://postfiles7.naver.net/20131110_134/musicee2_1384093699468xRwmq_JPEG/iPhone_0.jpg?type=w2">							
+							<ul class="articleList">
+								<li class="article"></li>
+								<li class="article"></li>
+								<li class="article"></li>
+								<li class="article"></li>
+								<li class="article"></li>
+								<li class="article"></li>
+								<li class="article"></li>
+							</ul>
+						</div>
+						<div class = "first-2">
+							<div class = "first-2-1">
+<img src="http://postfiles7.naver.net/20131110_294/musicee2_1384093703480bWNDv_JPEG/iPhone_2.jpg?type=w2">
+								<ul class="articleList">
+									<li class="article"></li>
+								</ul>
+							</div>
+							<div class = "first-2-2">
+								<img src="http://postfiles5.naver.net/20131110_260/musicee2_1384093705148tRpFF_JPEG/iPhone_5.jpg?type=w2">
+							
+								<ul class="articleList">
+									<li class="article"></li>
+								</ul>
+							</div>
+						</div>
+						<div class = "first-3">
+							<ul class = "articleList">
+								<li class="article"></li>
+								<li class="article"></li>
+								<li class="article"></li>
+								<li class="article"></li>
+								<li class="article"></li>
+								<li class="article"></li>
+								<li class="article"></li>
+								
+							</ul>
+						</div>
+					
+					</div>
+					<div class="sec_content">
+						<div class="sec-1"><img src="http://postfiles5.naver.net/20131110_260/musicee2_1384093705148tRpFF_JPEG/iPhone_5.jpg?type=w2">
+						<ul class ="articleList">
+							<li class="article"></li>
+						</ul>
+
+						</div>
+						<div class="sec-2">
+							<img src="http://postfiles5.naver.net/20131110_260/musicee2_1384093705148tRpFF_JPEG/iPhone_5.jpg?type=w2">
+							<ul class ="articleList">
+								<li class="article"></li>
+							</ul>
+						</div>
+						<div class="sec-3">
+							<img src="http://postfiles5.naver.net/20131110_260/musicee2_1384093705148tRpFF_JPEG/iPhone_5.jpg?type=w2">
+							<ul class ="articleList">
+								<li class="article"></li>
+							</ul>
+						</div>
+						<div class="sec-4">
+							<img src="http://postfiles5.naver.net/20131110_260/musicee2_1384093705148tRpFF_JPEG/iPhone_5.jpg?type=w2">
+							<ul class ="articleList">
+								<li class="article"></li>
+							</ul>
+						</div>
+					</div>
+					<div class="trd_content">
+						<div class="trd-1">
+							<ul class ="articleList">
+								<li class="article"></li>
+								<li class="article"></li>
+								<li class="article"></li>
+								<li class="article"></li>
+								<li class="article"></li>
+								<li class="article"></li>
+							</ul>
+						</div>
+						<div class="trd-2">
+							<img src="http://static.naver.net/newsstand/2013/1114/ZDNetKorea/135153/009.jpg">
+							<ul class ="articleList">
+								<li class="article"></li>
+								<li class="article"></li>
+								<li class="article"></li>
+								<li class="article"></li>
+								<li class="article"></li>
+							</ul>
+						</div>
+						<div class="trd-3">
+							<img src="http://static.naver.net/newsstand/2013/1114/ZDNetKorea/135153/010.jpg">
+							<ul class ="articleList">
+								<li class="article"></li>
+								<li class="article"></li>
+								<li class="article"></li>
+								<li class="article"></li>
+								<li class="article"></li>
+							</ul>
+						</div>
+					</div>
+			</div>
+		</articles>
+		<aside id ="right"></aside>
+		<div id="lowside"> 
+			<div class="lowside_left">
+				<ul>
+					<li class ="auto_change"></li>
+					<li class = "selection"></li>
+				</ul>
+			</div>
+			<div id="lowside_right">
+				<ul>
+					<li class = "pageNum"></li>
+					<li class="slash"></li>
+					<li class="wholeNum"></li>
+					<li class = "smallArrowL"></li>
+					<li class = "smallArrowR"></li>
+
+
+
+				</ul>
+			</div>
+		</div>
+		<div id="company_list"> 
+			<aside id="low_left">&lt;</aside>
+				<ul class = "companyList">
+					<li class ="first"> </li>
+					<li class = "second"> </li>
+					<li> </li>
+					<li> </li>
+					<li> </li>
+					<li> </li>
+					<li> </li>
+					<li> </li>
+					<li> </li>
+					<li> </li>
+					<li> </li>
+					<li> </li>
+				</ul>
+			<aside id="low_right">&gt;</aside>
+		</div>
+	</section>
+	
+	<footer>
+		<p><br>
+			공지사항
+			뉴스스탠드 개선 안내
+		</p>
+		<br>
+		copyright
+		NAVER Corp. All right reserved
+	</footer>
+</body>
+</html>

@@ -1,0 +1,633 @@
+
+/*reset*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+
+
+
+/* #, >, . 띄어쓰기에 따라서 달라진다. */
+
+body { 
+	color : black; 
+	font-family: 'NanumGothic'; 
+	font-size: 12;
+	margin: 0;
+	}
+	
+header {
+	background-image: url("http://static.naver.net/newsstand/img/20121231/bg_hd.png");
+	width : 100%;
+	height: 40px;
+
+}
+
+div#subject {
+	float: left;
+	position: relative;
+	width: 550px;
+	height: 30px;
+}
+/*서브젝트..왜 한 줄에 같이 올렸었는데 언젠가부터 다시 내려오지ㅠㅠ*/
+div#subject h1{	
+	background-position: 0px -85px;
+	background-image: url("http://static.naver.net/newsstand/img/20131014/sp_nwstd.png");
+	width: 115px;
+	height: 20px;
+	margin: 7px 10px 7px 20px ;
+	display: inline-block;
+	float: left;
+	
+}
+
+div#subject h2{
+/* 	float: left; */
+	display: inline-block;
+	background-position: -120px -85px;
+	background-image: url("http://static.naver.net/newsstand/img/20131014/sp_nwstd.png");
+	width: 250px;
+	height: 20px;
+	margin-top: 7px;
+	overflow: hidden;
+
+/*
+	margin-top: 4mm;
+	margin-left: 3mm;
+*/
+}
+
+div#subject>h2 span {
+	display: none;
+}
+
+div#select {
+	position: absolute;
+	overflow: hidden;
+	left: 50%;
+	width: 180px;
+	height: 30px;
+	margin-left: -90px;
+	margin-top: 3px;
+	background-position: 0px -115px;
+	background-image: url("http://static.naver.net/newsstand/img/20131014/sp_nwstd.png");
+
+/* 	height: 20px; */
+
+}
+/*
+div#subject span {
+	display: none;
+}
+*/
+div#mynews{
+
+	float: left;
+	width: 90px;
+	text-align: center;
+
+}
+
+div#whole_press{
+	float: left;
+	width: 90px;
+	text-align: center;
+
+}
+
+div#explain{
+	font-family: Arial,Tahoma,Sans-serif;
+	font-size: 15px;
+	font-style: grey;
+}
+
+
+nav {
+	background-image: url("http://static.naver.net/newsstand/img/20121231/bg_hd.png");
+	display: block;
+	width: 100%;
+	height: 20px;
+	padding: 10px;
+
+}
+nav>ul {
+	margin: 0px auto;
+	width: 550px;
+	background: url(http://static.naver.net/newsstand/img/20131014/sp_nwstd.png) no-repeat;
+	
+}
+nav>ul>li {
+	float: left;
+	padding:4px;
+	font-size: 12px;	
+}
+nav>ul>li a {
+	display: block;
+	width:100%;
+	height:24px;
+}
+li.list1 {
+	background: url(http://static.naver.net/newsstand/img/20131014/sp_nwstd.png) no-repeat;
+	background-position: -1px -252px;
+	width: 72px;
+	height: 24px;
+	padding: 0px;
+}
+li.list2 {
+	background: url(http://static.naver.net/newsstand/img/20131014/sp_nwstd.png) no-repeat;
+	background-position: -93px -278px;
+	width: 68px;
+	height: 24px;
+	padding: 0px;
+}
+
+li.list3 {
+	background: url(http://static.naver.net/newsstand/img/20131014/sp_nwstd.png) no-repeat;
+	background-position: -93px -304px;
+	width: 68px;
+	height: 24px;
+	padding: 0px;
+}
+li.list4 {
+	background: url(http://static.naver.net/newsstand/img/20131014/sp_nwstd.png) no-repeat;
+	background-position: -93px -382px;
+	width: 32px;
+	height: 24px;
+	padding: 0px;
+}
+li.list5 {
+	background: url(http://static.naver.net/newsstand/img/20131014/sp_nwstd.png) no-repeat;
+	background-position: -93px -330px;
+	width: 52px;
+	height: 24px;
+	padding: 0px;
+}
+li.list6 {
+	background: url(http://static.naver.net/newsstand/img/20131014/sp_nwstd.png) no-repeat;
+	background-position: -93px -408px;
+	width: 79px;
+	height: 24px;
+	padding: 0px;
+}
+li.list7 {
+	background: url(http://static.naver.net/newsstand/img/20131014/sp_nwstd.png) no-repeat;
+	background-position:-93px -434px;
+	width: 89px;
+	height: 24px;
+	padding: 0px;
+}
+li.list8 {
+	background: url(http://static.naver.net/newsstand/img/20131014/sp_nwstd.png) no-repeat;
+	background-position: -93px -460px;
+	width: 40px;
+	height: 24px;
+	padding: 0px;
+}
+
+section {
+	width: 100%;
+	height: 730px;
+	position: relative;
+	background-image: url("http://static.naver.net/newsstand/img/20121231/bg_bd.png");
+}
+
+aside{
+	font-size: 30px;
+	font-weight: bold;	
+	position: absolute;
+
+}
+aside#left {
+	left:20px;
+	top: 35%;
+	background-image: url(http://static.naver.net/newsstand/img/20131014/sp_nwstd.png);
+	background-position: 0px 0px;
+	height: 80px;
+	width: 60px;
+
+	}
+aside#right {
+right: 20px;
+top: 35%;
+	background-image: url(http://static.naver.net/newsstand/img/20131014/sp_nwstd.png);
+	background-position: -70px 0px;
+	height: 80px;
+	width: 60px;
+
+}
+
+articles{
+	position: relative;
+	height: 560px;
+	width: 900px;
+	margin: auto;
+	background-image: url("http://static.naver.net/newsstand/img/20121231/bg_panel.png");
+	box-sizing: border-box;
+	padding-left: 20px;
+	display: block;
+}
+
+div#upper{
+	border-bottom: 5px grey solid;
+	height: 110px;
+	width: 100%;
+	margin-right: 10px;
+	
+}
+div.upper_left {
+	margin: 10px;
+	position: relative;
+	float: left;
+	
+}
+div#logo {
+	position: relative;
+	width: 260px;
+	height: 55px; 
+	margin-top: 10px;
+}
+	
+div#under_logo{
+	position:relative;
+	float:left; 
+	height: 26px;
+	margin-top: 2px;
+	width: 300px;
+}
+
+div#under_logo>ul>li{ float: left;}
+
+div#list1 {
+	margin: 1px;
+	width: 65px;
+	height: 20px;
+	background: url(http://static.naver.net/newsstand/img/20131014/sp_nwstd.png) -187px -199px no-repeat;
+}
+
+div#list2 {
+	margin: 1px;
+	background: url(http://static.naver.net/newsstand/img/20131014/sp_nwstd.png) -293px -174px no-repeat;
+	width: 75px;
+	height: 23px;
+}
+
+div#list3{
+	margin: 1px;
+	background: url(http://static.naver.net/newsstand/img/20131014/sp_nwstd.png) -236px -174px no-repeat;
+	width: 18px;
+	height: 23px;
+}
+
+div#list4{
+	background: url(http://static.naver.net/newsstand/img/20131014/sp_nwstd.png) -255px -174px no-repeat;
+	width: 18px;
+	height: 23px;
+	margin: 1px;
+}
+
+div#list5{
+	background: url(http://static.naver.net/newsstand/img/20131014/sp_nwstd.png) -274px -174px no-repeat;
+	width: 18px;
+	height: 23px;
+	margin: 1px;
+}
+div#ad {float:right; width: 420px;  margin: 15px; }
+
+div.contents{
+	width: 900px;
+	height : 360px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	overflow: hidden;
+	margin-left: 10px;
+} 
+
+div.contents > div {  
+
+	height: 350px;
+	float : left; 
+	margin: 3px; 
+}
+
+div.first_content{
+	width : 470px; 
+}
+div.first-1{
+	width: 470px;
+	height: 130px;
+	display: inline-block;
+
+	
+}
+div.first-1 img{
+	width: 150px;
+	height: 120px;
+
+	margin: 5px;
+	float: left;
+}
+
+ul.articleList {
+	display: inline-block;
+}
+div.first-2 {
+	width: 470px;
+	height: 90px;
+	border-top: 1px dotted black;
+
+}
+div.first-2 div{
+	width: 210px;
+	padding: 5px;
+	display: inline-block;
+}
+div.first-2 img{
+	height: 80px;
+}
+
+div.first-3{
+	height: 120px;
+	border-top: 1px dotted black;
+
+}
+div.first-3>ul{
+	height: 120px;
+	width: 460px;
+}
+div.sec_content{
+	background-color: #dad6ca;
+}
+div.sec_content li{
+	text-align: center;
+}
+div.sec_content div{
+	width : 150px;
+	height: 85px;
+	padding: 1px;
+	text-align: center;
+} 
+
+div.sec_content div img{
+	width: 80px;
+	height: 60px;
+}
+
+div.sec_content a {
+	margin: auto;
+}
+div.trd_content div {
+	width: 225px;
+	height: 110px;
+	margin: 3px;
+/* 	border: black 1px solid; */
+}
+div.trd_content img {
+	width: 225px;
+}
+
+
+/*
+
+div#first_content{border: 1px solid black;width : 470px;height: 360px;float : left;}
+div#sec_content{border: 1px solid black;width : 150px;height: 360px;float : left;}
+div#trd_content{border: 1px solid black;width : 228px;height: 360px;float : right;}
+*/
+
+
+div#lowside{
+
+	height: 30px;
+	width: 900px;
+	margin: 10px auto;
+	
+}
+div.lowside_left>ul>li {
+	float:left;
+
+	margin-right: 10px;
+}
+
+div.lowside_left{
+	height: 20px;
+	width: 250px;
+	float: left;
+	margin: 2px;
+	padding: 1px;
+}
+
+div.lowside_left>ul>li.auto_change{
+	background-image: url(http://static.naver.net/newsstand/img/20131014/sp_nwstd.png);
+	background-position: -525px -300px;
+	width: 44px;
+	height: 15px;
+	text-align: center;
+	margin: 5px;
+}
+div.lowside_left>ul>li.selection{
+	background-position: -435px -455px;
+	background-image: url(http://static.naver.net/newsstand/img/20131014/sp_nwstd.png);
+	width: 90px;
+	height: 24px;
+	margin-left: 10px;
+}
+
+div#lowside_right{
+	float: right;
+	height:20px;
+	width: 100px;
+	margin: 2px;
+	padding: 1px;
+}
+
+div#lowside_right>ul>li {
+	display: inline-block;
+
+}
+
+aside#low_left{
+	font-size: 20px;
+	left: 20px;
+	top: 89%;
+
+	padding: 2px;
+}
+aside#low_right{
+	font-size: 20px;
+	right: 20px;
+	top:89%;
+
+	padding: 2px;
+}
+
+div#company_list{
+	background-image: url("http://static.naver.net/newsstand/img/20121231/bg_nv.png");
+	height: 100px;
+	display: block;
+
+}
+div#company_list>ul{
+	margin: 0px auto;
+	width: 950px;
+}
+
+.companyList li { /* selector공부할 것..ㅠㅠ*/
+	margin: 15px 0px 2px;
+	display: inline-block;
+	vertical-align: top;
+	width:78px;
+	height: 78px;
+	margin-right: 2px;
+}
+
+ul li.first {
+	background-image: url("http://static.naver.net/newsstand/up/2012/1119/nsd11405830.gif");
+	border: solid black 1px;
+}
+ul li.second {
+	background-image: url("http://static.naver.net/newsstand/img/20131014/sp_nwstd.png");
+	background-position: -3.5px -578px;
+
+	
+}
+
+footer {
+	background-image: url("http://static.naver.net/newsstand/img/20131014/bg_ft.png");
+	border: black 1px solid;
+	width: 100%;
+	height: 81px;
+	text-align: center;
+	
+}
+footer>ul{
+		margin: 0px auto; 
+		width: 250px;
+		overflow: hidden;
+}
+footer>ul>li{
+	float: left;
+	margin: 2px;
+
+}
+
+a {
+	text-decoration: none;
+	color: gray;
+}
+
+.smallArrowL{
+	background-image: url(http://static.naver.net/newsstand/img/20131014/sp_nwstd.png);
+	background-position: -535px -585px;
+	width:22px;
+	height:23px;
+}
+
+.smallArrowR{
+	background-image: url(http://static.naver.net/newsstand/img/20131014/sp_nwstd.png);
+	background-position: -460px -585px;
+	width:22px;
+	height:23px;
+}
+.pageNum{
+background-image: url(http://static.naver.net/newsstand/img/20131014/sp_nwstd.png);
+	background-position: -187px -116px;
+	width:10px;
+	height:13px;
+	margin-bottom: 3px;
+}
+.slash{
+	background-image: url(http://static.naver.net/newsstand/img/20131014/sp_nwstd.png);
+	background-position: -321px -132px;
+	width: 10px;
+	height:13px;
+		margin-bottom: 3px;
+}
+.wholeNum{
+	background-image: url(http://static.naver.net/newsstand/img/20131014/sp_nwstd.png);
+	background-position: -254px -132px;
+	width: 10px;
+	height:13px;
+		margin-bottom: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
