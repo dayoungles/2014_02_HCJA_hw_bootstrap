@@ -13,4 +13,3 @@ list.addEventListener("click", function(e){
 	obj.registerEvents(name);
 });
 
-
