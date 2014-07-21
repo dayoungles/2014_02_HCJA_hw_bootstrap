@@ -14,6 +14,9 @@ function Product(name, price) {
 }
 
 function Food(name, price) {
+  // 이 예제는 상속관련 하는 곳에서 주로 사용하는 패턴인데요.
+  // 일반적이고 쉬운 call예제는 아닙니다.
+  // 수업시간에 배운 call,apply에 대한 활용(context를 바꿔서 함수를 실행한다)는 것만 잘 기억하세요.
   Product.call(this, name, price);
   this.category = 'food';
   this.type = "delicious";
