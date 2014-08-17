@@ -1,0 +1,56 @@
+header{
+/* 	width: 100%; */
+
+/* 	border: 1px solid black; */
+	margin: 20px; /* 오른쪽 마진이 이상해 보이는데, width100%가 있으면 이상해보이는 듯? 왜 그러지?  */
+}
+
+header div{
+	font-family:  cursive, "Lucida Console", Monaco, monospace;
+	font-size: 5em;
+	margin: 0px auto;
+	width: 450px;
+	color: #820007;
+	font-weight: bold;
+}
+
+nav div.backboard {
+	width: 200%; 
+	left: -50%;
+	position: relative;
+	border: 1px solid green;
+
+}
+
+nav div.visible {
+	overflow:hidden;
+	position:relative;
+	left: 25%;
+	width: 50%;
+	border:1px solid red;
+	display: block;
+}
+
+nav div.backboard>.visible>div.chain {
+	position: relative;
+	left: 25%;
+	font-family: 'Abel', sans-serif, "Lucida Console", Monaco, monospace;
+	font-size: 6em;
+	font-weight: 300;
+	height: 150px;
+	width: 90%;
+	border: 1px solid black;
+	margin: 10px 20px;
+	color: #c3a1a3;
+}
+
+div.right{
+	left:0px;
+}
+section article{
+	
+	height: 700px;
+	margin: 70px 20px;
+	border: solid black 1px;
+	
+}
