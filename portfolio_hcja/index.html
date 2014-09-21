@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
 	<head>
+	<meta charset="utf-8">
 		<link rel = "stylesheet" type = "text/css" href = "reset.css">
 		<link rel = "stylesheet" type = "text/css" href = "index.css">
+		<link rel = "stylesheet" type = "text/css" href = "bottom.css">
+		<link rel = "stylesheet" type = "text/css" href = "imgBackground.css">
 		<link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
@@ -13,11 +16,27 @@
 		</header>
 		<nav>
 			<div class="visible">
+
 				<ul class="list left slow">
+
 					<li class="backboard first">
+						
+						<div class="article0 directImg ">
+							<img src="image/cat1.jpg"/>
+						</div>
+						<div class="article0 direct ">
+							<img class="article0" src="image/wait.png"/>	
+						</div>
 						<span>DIRECT ROUTE TO PIECE</span>
+
 					</li>
 					<li class="backboard second">
+						<div class="article1 directImg ">
+							<img src="image/dog1.jpg"/>
+						</div>
+						<div class="article1 direct ">
+							<img class="article1" src="image/wait.png"/>									
+						</div>
 						<span>DIRECT ROUTE TO PIECE</span>
 					</li>
 					<li class="backboard third">
@@ -29,12 +48,26 @@
 			<div class="visible">
 				<ul class="list right ">
 					<li class="backboard first">
+						
+						<div class="article2 directImg ">
+							<img src="image/betta1.jpg"/>
+						</div>
+						<div class="article2 direct ">
+							<img class="article2" src="image/wait.png"/>	
+						</div>
+						
 						<span>DIRECT ROUTE TO PIECE</span>
 					</li>
 					<li class="backboard second">
 						<span>DIRECT ROUTE TO PIECE</span>
 					</li>
 					<li class="backboard third">
+						<div class="article3 directImg ">
+							<img src="image/bear1.jpg"/>
+						</div>
+						<div class="article3 direct ">
+							<img class="article3" src="image/wait.png"/>	
+						</div>
 						<span>DIRECT ROUTE TO PIECE </span>
 					</li>					
 				</ul>
@@ -42,12 +75,30 @@
 			<div class="visible">
 				<ul class="list left fast">
 					<li class="backboard first">
+						<div class="article0 directImg ">
+							<img src="image/cat2.jpg"/>
+						</div>
+						<div class="article0 direct ">
+							<img class="article0" src="image/wait.png"/>	
+						</div>
 						<span>DIRECT ROUTE TO PIECE </span>
 					</li>
 					<li class="backboard second">
+						<div class="article1 directImg ">
+							<img src="image/dog2.jpg"/>
+						</div>
+						<div class="article1 direct ">
+							<img class="article1" src="image/wait.png"/>	
+						</div>
 						<span>DIRECT ROUTE TO PIECE </span>
 					</li>
 					<li class="backboard third">
+						<div class="article2 directImg ">
+							<img src="image/betta2.jpg"/>
+						</div>
+						<div class="article2 direct ">
+							<img class="article2" src="image/wait.png"/>	
+						</div>
 						<span>DIRECT ROUTE TO PIECE </span>
 					</li>
 
@@ -56,16 +107,153 @@
 			</div>
 		</nav>
 		<section>
-			<article>
+			<!--첫번째 아티클-->
+			<article id="article0">
+				<div class="arrow left">
+					<img src ="image/arrow_left.png"/> <!-- 여기에다가 이벤트 리스너 -->
+					<div class="img_page">
+						<span class="current_page">1</span>
+						/
+						<span class="whole_page"></span>
+						
+					</div>
+				</div>
+				<div class="arrow right">
+					<img src="image/arrow_right.png"/>
+					<div class="img_page"></div>
+				</div>
+				<div class="block">
+					<div class="show_image">
+						<ul class="img_list">
+							<li class="img" id="img0">
+								<img src="image/wait.png"/>
+							</li>
+							<li class="img" id="img1">
+								<img src="image/wait.png"/>
+							</li>
+							<li class="img" id="img2">
+								<img src="image/wait.png"/>
+							</li>
+							<li class="img" id="img3">
+								<img src="image/wait.png"/>
+							</li>
+							<li class="img" id="img4">
+								<img src="image/wait.png"/>
+							</li>
+						</ul>
+	
+					</div>
+
+				</div>
 			</article>
-			<article>
+		<!--2번째 아티클-->
+			<article id="article1">
+				<div class="arrow left">
+					<img src ="image/arrow_left.png"/> <!-- 여기에다가 이벤트 리스너 -->
+					<div class="img_page">
+						<span class="current_page">1</span>
+						/
+						<span class="whole_page"></span>
+						
+					</div>
+				</div>
+				<div class="arrow right">
+					<img src="image/arrow_right.png"/>
+					<div class="img_page"></div>
+				</div>
+				<div class="block">
+					<div class="show_image">
+						<ul class="img_list">
+							<li class="img" id="img0">
+								<img src="image/wait.png"/>
+							</li>
+	
+							<li class="img" id="img1">
+								<img src="image/wait.png"/>
+							</li>
+							<li class="img" id="img2">
+								<img src="image/wait.png"/>
+							</li>
+	
+						</ul>
+	
+					</div>
+				</div>
 			</article>
-			<article>
+			
+		<!--3번째 아티클-->
+			<article id="article2">
+				<div class="arrow left">
+					<img src ="image/arrow_left.png"/> <!-- 여기에다가 이벤트 리스너 -->
+					<div class="img_page">
+						<span class="current_page">1</span>
+						/
+						<span class="whole_page"></span>
+						
+					</div>
+				</div>
+				<div class="arrow right">
+					<img src="image/arrow_right.png"/>
+					<div class="img_page"></div>
+				</div>
+				<div class="block">
+					<div class="show_image">
+						<ul class="img_list">
+							<li class="img" id="img0">
+								<img src="image/wait.png"/>
+							</li>
+	
+							<li class="img" id="img1">
+								<img src="image/wait.png"/>
+							</li>
+							<li class="img" id="img2">
+								<img src="image/wait.png"/>
+							</li>
+							<li class="img" id="img3">
+								<img src="image/wait.png"/>
+							</li>
+						</ul>
+	
+					</div>
+
+				</div>
 			</article>
-			<article>
+			
+		<!--4번째 아티클-->
+			<article id="article3">
+				<div class="arrow left">
+					<img src ="image/arrow_left.png"/>
+					<div class="img_page">
+						<span class="current_page">1</span>
+						/
+						<span class="whole_page"></span>
+						
+					</div>
+				</div>
+				<div class="arrow right">
+					<img src="image/arrow_right.png"/>
+					<div class="img_page"></div>
+				</div>
+				<div class="block">
+					<div class="show_image">
+						<ul class="img_list">
+							<li class="img" id="img0">
+								<img src="image/wait.png"/>
+							</li>
+	
+							<li class="img" id="img1">
+								<img src="image/wait.png"/>
+							</li>
+						</ul>
+	
+					</div>
+
+				</div>
 			</article>	
 		</section>
-<!-- 	<script src="index.js"></script> -->
+		
 		<script src="upper.js"></script>	
+		<script src="bottom.js"></script>	
+
 	</body>
 </html>

@@ -26,6 +26,46 @@ nav div.visible {
 	margin: 20px 0px;
 }
 
+nav div.directImg{
+	width: 10%;
+	height: 100px;
+	position: absolute;
+	overflow:hidden;
+	background-image:;
+ 	z-index: -1;
+}
+nav div.directImg>img {
+	width: 100%;
+	
+}
+nav div.direct {
+	width: 10%;
+	height: 100px;
+	position: absolute;
+	overflow:hidden;
+	opacity: 0;	
+}
+
+nav div.direct>img{
+	height:100%;
+	position:relative;
+	left:15%;
+}
+nav div.direct:hover {
+	opacity:1;
+	
+}
+/*
+
+div.article0{
+	left: 50px;
+}
+
+div.article1{
+	left: 450px;
+}
+*/
+
 ul.list{
 	width: 300%;
 	height: 200px;
@@ -56,41 +96,33 @@ ul li span {
 	font-family: 'Abel', sans-serif, "Lucida Console", Monaco, monospace;
 	font-size: 6em;
 	letter-spacing: 0.3em;
-
-}
-
-
-/*
-nav div.visible {
-	overflow:hidden;
-	position:relative;
-	left: 25%;
-	width: 50%;
-	border:1px solid red;
-	display: inline-block;
-}
-
-nav div.backboard>.visible>div.chain {
-	position: relative;
-	left: 25%;
-	font-family: 'Abel', sans-serif, "Lucida Console", Monaco, monospace;
-	font-size: 6em;
-	font-weight: 300;
-	height: 150px;
-	width: 90%;
-	border: 1px solid black;
-	margin: 10px 20px;
-	color: #c3a1a3;
-}
-
-div.right{
-	left:0px;
-}
-*/
-section article{
 	
-	height: 700px;
-	margin: 70px 20px;
-	border: solid black 1px;
-	
+}
+
+nav ul.slow div.article0 {
+	left:150px;
+}
+
+nav ul.slow div.article1 {
+	left: 50px;
+}
+
+nav ul.right div.article2 {
+	left:50px;
+}
+
+nav ul.right div article3{
+	left:1300px;
+}
+
+nav ul.fast div.article0{
+	left:700px;
+}
+
+nav ul.fast div.article1{
+	left:200px;
+}
+
+nav ul.fast div.article2{
+	left:700px;
 }

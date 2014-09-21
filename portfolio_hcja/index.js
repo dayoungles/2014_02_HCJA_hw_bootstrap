@@ -69,7 +69,7 @@ var split = function() {
  	} 	 
 }
 
-
+//최초 자동 시작. 
 var timer = setInterval(function() {
 		moveRight();
 		split();
@@ -79,13 +79,13 @@ var event = function() {
 	var ulLists = document.getElementsByClassName("list");
 	for (var i = 0; i < ulLists.length; i++){
 		ulLists[i].addEventListener("mouseover", function() {
-			console.log("mouseover");
+
 			clearInterval(timer);
 		});
 	
 			
 		ulLists[i].addEventListener("mouseout", function() {
-			console.log("mouseout + addevent");
+
 			timer = setInterval(function() {
 					moveRight();
 					split();
@@ -96,6 +96,6 @@ var event = function() {
 
 event();	
 
-//1. 코드 리팩토링 to constructor
+//1. 코드 리팩토링 to prototype
 //2. 셋인터벌 한줄씩 영향 받도록 ul맏각각 달기.
 //3. 
