@@ -25,7 +25,7 @@ upperSide.prototype.moveUl= function(ulID) {
 	this.moveLi(elList, SPEED);
 	this.split(elList);
 	
-}
+};
 
 /*
 moveUl에서 li 가 움직이게 하는 부분만 함수로 추출. 근데 이걸 꼭 prototype으로 빼놔야 할까? 
@@ -42,7 +42,7 @@ upperSide.prototype.moveLi = function(ul, SPEED){
 		leftValue = parseInt(leftValue) + SPEED;
 		ul.children[j].style.left = leftValue+"px";
 	} 
-}
+};
 
 /*
 	moveUL에서 쓰는 rolling 용 함수. 
@@ -54,25 +54,25 @@ upperSide.prototype.split = function(elList) {
 	var style = window.getComputedStyle(elList.children[0]);
 	var left = style.left;
 	left = parseInt(left);						
-
+	var liChildren, clone;
 	if(elList.className.indexOf("left") != -1 && left < -width){
-		var liChildren = elList.firstElementChild;
+		liChildren = elList.firstElementChild;
 		
-		var clone = liChildren.cloneNode(true);
+		clone = liChildren.cloneNode(true);
 		clone.style.left = left + 4500 + "px"; 
 		elList.appendChild(clone);
 		elList.removeChild(liChildren);
 	} 
 	if(elList.className.indexOf("right") != -1 && left >= 0){//원래는 어떻게 돌았길래 괜찮았을까? 지금은 왜 안되는거지?
-		var liChildren = elList.lastElementChild;
-		var clone = liChildren.cloneNode(true);
+		liChildren = elList.lastElementChild;
+		clone = liChildren.cloneNode(true);
 		clone.style.left = -1497 + "px"; 
 		elList.insertAdjacentElement("afterBegin", clone);
 		elList.removeChild(liChildren);
 	}
 
  
-}
+};
 
 upperSide.prototype.dontMove = function(ulID, timer) {
 	var elList = this.ulLists[ulID];
@@ -81,7 +81,7 @@ upperSide.prototype.dontMove = function(ulID, timer) {
 		console.log(that.timer[ulID]+ " mouseover");
 		clearInterval(that.timer[ulID]);
 	});
-}
+};
 
 /*
   mouseout하면 다시 움직이도록 하고 싶은데. 왜 안될까????????????????????????
@@ -98,23 +98,23 @@ upperSide.prototype.moveAgain = function(ulID, timer){
 		}, 100);
 	});
 
-}
+};
 
 upperSide.prototype.scrollMove = function() {
 	var direct = document.getElementsByClassName("direct");
 	for(var i = 0; i < direct.length; i++){
-		direct[i].addEventListener("click", function(e){
-
-			var className = e.target.className;
-			className = className.split(" ");
-
-			var id = className[0];
-			console.log(id);			
-			var article = document.getElementById(id);
-			window.scrollTo(0, article.offsetTop);
-		}, true);
+		(function(i){
+			direct[i].addEventListener("click", function(e){
+				var className = e.target.className;
+				className = className.split(" ");
+				var id = className[0];
+				console.log(id);			
+				var article = document.getElementById(id);
+				window.scrollTo(0, article.offsetTop);
+			}, true);
+		})(i);
 	}
-}
+};
 // service code
 /*
 window('load', function() {
@@ -139,8 +139,7 @@ upperSide.prototype.runAnimation = function() {
 		(function(i){
 		 that.timer[i] = setInterval(function() {//this window timer를 배열로 
 			that.moveUl(i);
-			},100 );//requestanimationframe...? 함수 이름. 덜덜 최적화된 //settimeout 으로 재귀를.. 
-
+			},100 );
 		})(i);
 		
 		this.dontMove(i, that.timer);
@@ -148,13 +147,13 @@ upperSide.prototype.runAnimation = function() {
 
 		this.scrollMove();
 	}
-}
+};
  
 window.onload = function() {
 	var ulLists = document.getElementsByClassName("list");
 	var ele = new upperSide(ulLists);
 	ele.runAnimation();
-}
+};
 
 
 

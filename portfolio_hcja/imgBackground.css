@@ -1,5 +1,7 @@
 article li.img {
     background-repeat: no-repeat;	
+    background-size: auto 400px;
+    background-position: center center;
 }
 
 /* article0-li cats*/
