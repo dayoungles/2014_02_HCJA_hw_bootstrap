@@ -1,5 +1,5 @@
 function upperSide(ulLists) {
-	this.ulLists = document.getElementsByClassName("list");	
+    this.ulLists = document.getElementsByClassName("list");	
 	this.timer=[];//배열로 만들었당. 
 }
 
@@ -149,11 +149,11 @@ upperSide.prototype.runAnimation = function() {
 	}
 };
  
-window.onload = function() {
+window.addEventListener("load", function() {
 	var ulLists = document.getElementsByClassName("list");
 	var ele = new upperSide(ulLists);
 	ele.runAnimation();
-};
+});
 
 
 
